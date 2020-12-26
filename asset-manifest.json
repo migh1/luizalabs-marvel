@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/luizalabs-marvel/static/css/main.ba736ebf.chunk.css",
-    "main.js": "/luizalabs-marvel/static/js/main.0dae54e2.chunk.js",
-    "main.js.map": "/luizalabs-marvel/static/js/main.0dae54e2.chunk.js.map",
+    "main.js": "/luizalabs-marvel/static/js/main.b36e0048.chunk.js",
+    "main.js.map": "/luizalabs-marvel/static/js/main.b36e0048.chunk.js.map",
     "runtime-main.js": "/luizalabs-marvel/static/js/runtime-main.d17e4040.js",
     "runtime-main.js.map": "/luizalabs-marvel/static/js/runtime-main.d17e4040.js.map",
     "static/js/2.296d06ff.chunk.js": "/luizalabs-marvel/static/js/2.296d06ff.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.d17e4040.js",
     "static/js/2.296d06ff.chunk.js",
     "static/css/main.ba736ebf.chunk.css",
-    "static/js/main.0dae54e2.chunk.js"
+    "static/js/main.b36e0048.chunk.js"
   ]
 }

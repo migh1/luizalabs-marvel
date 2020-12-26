@@ -4,12 +4,12 @@ import favoriteFilledIcon from '../../assets/icones/heart/Path.png';
 
 import './index.css';
 
-const Favorite = (active) => {
+const Favorite = ({ active }) => {
   return active ? (
     <img className="favorite-icon" src={favoriteFilledIcon} alt="Botão de coração preenchido" />
   ) : (
     <img
-      className="favorite-icon"
+      className="favorite-outlined-icon"
       src={favoriteOutlinedIcon}
       alt="Botão de coração não preenchido"
     />

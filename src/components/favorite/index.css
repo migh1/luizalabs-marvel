@@ -1,6 +1,10 @@
 .favorite-icon {
   max-width: 15px;
   margin-bottom: -2px;
-  margin-right: 8px;
-  margin-left: 8px;
+}
+
+.favorite-outlined-icon {
+  max-width: 20px;
+  max-height: 19px;
+  margin-bottom: -2px;
 }

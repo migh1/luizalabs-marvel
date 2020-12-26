@@ -1,0 +1,26 @@
+.hero-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.hero-list > div {
+  max-width: calc(25% - 20px);
+  padding: 10px;
+}
+
+.hero-list span:nth-last-child() {
+  text-align: end;
+}
+
+.hero-thumbnail {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
+
+.hero-description {
+  display: flex;
+  justify-content: space-between;
+}

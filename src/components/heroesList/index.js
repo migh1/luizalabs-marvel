@@ -1,17 +1,53 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from 'react';
+import md5 from 'md5';
+import useRequest from '../../hooks/useRequest';
+
+import './index.css';
+import Favorite from '../favorite';
+
+const publicKey = process.env.REACT_APP_MARVEL_PUBLIC_KEY;
+const privateKey = process.env.REACT_APP_MARVEL_PRIVATE_KEY;
 
 const HeroesList = () => {
+  const [heroes, setHeroes] = useState([]);
+  const { _get, loading, response, error } = useRequest();
+
+  const fetchHeroes = () => {
+    const ts = Date.now();
+    const hash = md5(ts + privateKey + publicKey);
+    _get(`/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}`);
+  };
+
+  useEffect(() => {
+    fetchHeroes();
+  }, []);
+
+  useEffect(() => {
+    if (response) {
+      setHeroes(response.data.results);
+    }
+  }, [response]);
+
   return (
-    <>
-      <div>Hero 1</div>
-      <div>Hero 2</div>
-      <div>Hero 3</div>
-      <div>Hero 4</div>
-      <div>Hero 5</div>
-      <div>Hero 6</div>
-      <div>Hero 7</div>
-      <div>Hero 8</div>
-    </>
+    <div className="hero-list">
+      {heroes.map((hero) => {
+        return (
+          <div key={hero.id}>
+            <img
+              className="hero-thumbnail"
+              src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
+              alt={hero.name}
+            />
+            <br />
+            <span className="hero-description">
+              {hero.name}
+              <Favorite active={false} />
+            </span>
+          </div>
+        );
+      })}
+    </div>
   );
 };
 

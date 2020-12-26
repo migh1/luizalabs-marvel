@@ -18,11 +18,11 @@ const HeroesHeader = () => {
             src={nounSuperheroIcon}
             alt="ícone de herói com capa"
           />
-          <span className="heroes-header-text-color">Ordernar por nome - A/Z</span>
+          <span className="heroes-header-text-color">Ordenar por nome - A/Z</span>
           <Toggle />
         </span>
-        <span>
-          <Favorite />
+        <span className="heroes-header-favorite">
+          <Favorite active />
           <span className="heroes-header-text-color">Somente favoritos</span>
         </span>
       </div>

@@ -6,7 +6,7 @@
 }
 
 .hero-list > div {
-  max-width: calc(25% - 20px);
+  width: calc(25% - 20px);
   padding: 10px;
 }
 

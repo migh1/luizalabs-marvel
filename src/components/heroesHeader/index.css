@@ -13,3 +13,9 @@
 .heroes-header-color {
   color: #ff1510;
 }
+
+.heroes-noun-superhero-icon {
+  max-width: 14px;
+  margin-bottom: -4px;
+  margin-right: 4px;
+}

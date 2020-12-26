@@ -13,7 +13,11 @@ const HeroesHeader = () => {
       </div>
       <div>
         <span className="heroes-header-color">
-          <img src={nounSuperheroIcon} alt="ícone de herói com capa" />
+          <img
+            className="heroes-noun-superhero-icon"
+            src={nounSuperheroIcon}
+            alt="ícone de herói com capa"
+          />
           Ordernar por nome - A/Z
           <Toggle />
         </span>

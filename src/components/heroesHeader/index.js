@@ -12,18 +12,18 @@ const HeroesHeader = () => {
         <span className="heroes-header-total">Encontrados 20 heróis</span>
       </div>
       <div>
-        <span className="heroes-header-color">
+        <span>
           <img
             className="heroes-noun-superhero-icon"
             src={nounSuperheroIcon}
             alt="ícone de herói com capa"
           />
-          Ordernar por nome - A/Z
+          <span className="heroes-header-text-color">Ordernar por nome - A/Z</span>
           <Toggle />
         </span>
-        <span className="heroes-header-color">
+        <span>
           <Favorite />
-          Somente favoritos
+          <span className="heroes-header-text-color">Somente favoritos</span>
         </span>
       </div>
     </div>

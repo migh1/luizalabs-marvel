@@ -1,0 +1,28 @@
+.searchBar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.searchBar-container img {
+  position: relative;
+}
+
+.searchBar {
+  margin-top: 30px;
+
+  border-radius: 40px;
+  padding: 20px 0px;
+  padding-left: 80px;
+  padding-right: 30px;
+  width: 60vw;
+
+  border: 1px solid #fdecec;
+  background: url('../../assets/busca/Lupa/Shape.png') no-repeat scroll 24px 18px;
+  background-color: #fdecec;
+}
+
+.searchBar::placeholder {
+  color: #ff1510;
+}

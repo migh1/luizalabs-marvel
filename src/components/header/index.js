@@ -1,16 +1,18 @@
 import React from 'react';
 import Logo from '../logo';
 
+import './index.css';
+
 const Header = () => {
   return (
-    <>
+    <div className="header">
       <Logo />
-      <p>EXPLORE O UNIVERSO</p>
-      <p>
+      <span className="title">EXPLORE O UNIVERSO</span>
+      <span className="subtitle">
         Mergulhe no domínio deslumbrante de todos os personagens clássicos que você ama - e aqueles
         que você descobrirá em breve!
-      </p>
-    </>
+      </span>
+    </div>
   );
 };
 

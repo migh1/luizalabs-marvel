@@ -1,0 +1,94 @@
+.hero-description-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  flex-direction: column;
+
+  width: 30vw;
+
+  padding: 10%;
+}
+
+.hero-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.hero-title-container img {
+  margin-right: 30px;
+}
+
+.hero-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #404040;
+}
+
+.hero-description {
+  width: 100%;
+  font-size: 22px;
+  margin-top: 40px;
+  font-weight: 500;
+  color: #8c8c8c;
+  line-height: 40px;
+}
+
+.hero-add-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 40px;
+  width: 100%;
+  color: #404040;
+}
+
+.hero-comics {
+  width: 70%;
+}
+.hero-comics > span:first-child {
+  font-weight: 500;
+  font-size: 20px;
+}
+.hero-comics > span:last-child {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.hero-movies {
+  width: 30%;
+}
+.hero-movies > span:first-child {
+  font-weight: 500;
+  font-size: 20px;
+}
+.hero-movies > span:last-child {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.hero-rating {
+  width: 100%;
+  margin-top: 40px;
+  color: #404040;
+}
+
+.hero-rating > span:first-child {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.hero-last-comic {
+  width: 100%;
+  margin-top: 40px;
+  font-size: 20px;
+  color: #404040;
+}
+.hero-last-comic > span:first-child {
+  font-weight: 500;
+}

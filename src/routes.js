@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import HeroDetails from './pages/HeroDetails';
+import Hero from './pages/Hero';
 import NotFound from './pages/NotFound';
 
 const Routes = () => {
@@ -9,7 +9,7 @@ const Routes = () => {
     <HashRouter basename="/">
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/hero/:id" component={HeroDetails} />
+        <Route exact path="/hero/:id" component={Hero} />
         <Route component={NotFound} />
       </Switch>
     </HashRouter>

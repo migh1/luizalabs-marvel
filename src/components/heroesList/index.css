@@ -18,9 +18,16 @@
   width: 100%;
   height: 225px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .hero-description {
   display: flex;
   justify-content: space-between;
+  padding: 15px 0;
+}
+
+.hero-name {
+  font-size: 19px;
+  font-weight: 500;
 }

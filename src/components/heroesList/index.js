@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import md5 from 'md5';
 import useRequest from '../../hooks/useRequest';
+import Favorite from '../favorite';
 
 import './index.css';
-import Favorite from '../favorite';
 
 const publicKey = process.env.REACT_APP_MARVEL_PUBLIC_KEY;
 const privateKey = process.env.REACT_APP_MARVEL_PRIVATE_KEY;
@@ -41,7 +41,7 @@ const HeroesList = () => {
             />
             <br />
             <span className="hero-description">
-              {hero.name}
+              <span className="hero-name">{hero.name}</span>
               <Favorite active={false} />
             </span>
           </div>

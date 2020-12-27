@@ -2,13 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import md5 from 'md5';
+import { publicKey, privateKey } from '../../contants';
 import useRequest from '../../hooks/useRequest';
 import Favorite from '../favorite';
 
 import './index.css';
-
-const publicKey = process.env.REACT_APP_MARVEL_PUBLIC_KEY;
-const privateKey = process.env.REACT_APP_MARVEL_PRIVATE_KEY;
 
 const HeroesList = () => {
   const [heroes, setHeroes] = useState([]);

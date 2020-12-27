@@ -1,12 +1,24 @@
-.favorite-icon {
+.favorite-iconx1 {
+  max-width: 15px;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+.favorite-iconx2 {
   max-width: 15px;
   margin-bottom: -2px;
   cursor: pointer;
 }
 
-.favorite-outlined-icon {
+.favorite-outlined-iconx1 {
   max-width: 20px;
   max-height: 19px;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+
+.favorite-outlined-iconx2 {
+  max-width: 40px;
+  max-height: 39px;
   margin-bottom: -2px;
   cursor: pointer;
 }

@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <SearchBar />
+      <SearchBar className="searchBar-container" />
       <HeroesContainer />
       <Footer />
     </>

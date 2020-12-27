@@ -2,9 +2,9 @@ import React from 'react';
 
 import './index.css';
 
-const SearchBar = () => {
+const SearchBar = ({ className }) => {
   return (
-    <div className="searchBar-container">
+    <div className={className}>
       <input className="searchBar" type="search" placeholder="Procure por heróis" />
     </div>
   );

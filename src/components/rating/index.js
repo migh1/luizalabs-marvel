@@ -7,11 +7,11 @@ import './index.css';
 const Rating = ({ stars }) => {
   const rating = [];
   for (let i = 0; i < stars; i++) {
-    rating.push(<img src={filledStar} alt="Ícone de estrela preenchido" />);
+    rating.push(<img key={i + 1} src={filledStar} alt="Ícone de estrela preenchido" />);
   }
 
   for (let i = 0; i < 5 - stars; i++) {
-    rating.push(<img src={outlinedStar} alt="Ícone de estrela não preenchido" />);
+    rating.push(<img key={6 - i} src={outlinedStar} alt="Ícone de estrela não preenchido" />);
   }
 
   return rating.map((star) => {

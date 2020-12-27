@@ -8,6 +8,7 @@ import HeroDescription from '../heroDescription';
 import HeroImage from '../heroImage';
 
 import './index.css';
+import Footer from '../footer';
 
 const HeroDetails = ({ id }) => {
   const { _get, loading, response, error } = useRequest();
@@ -28,14 +29,30 @@ const HeroDetails = ({ id }) => {
   useEffect(() => {
     if (response) {
       setHero(response.data.results[0]);
+
+      const { styleSheets } = document;
+
+      for (const sheet of styleSheets) {
+        if (sheet.rules.length) {
+          for (const rule of sheet.cssRules) {
+            if (rule.selectorText === '.hero-container::after') {
+              console.log(hero.name);
+              rule.style['content'] = `'${response.data.results[0].name}'`;
+            }
+          }
+        }
+      }
     }
   }, [response]);
 
   return (
-    <div className="hero-container">
-      <HeroDescription hero={hero} />
-      <HeroImage thumbnail={hero.thumbnail} />
-    </div>
+    <>
+      <div className="hero-container">
+        <HeroDescription hero={hero} />
+        <HeroImage thumbnail={hero.thumbnail} />
+      </div>
+      <Footer />
+    </>
   );
 };
 

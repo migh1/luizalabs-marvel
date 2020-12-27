@@ -1,5 +1,8 @@
 import React from 'react';
 import Favorite from '../favorite';
+import Book from '../book';
+import Movie from '../movie';
+import Rating from '../rating';
 
 import './index.css';
 
@@ -23,18 +26,23 @@ const HeroDescription = ({ hero }) => {
         <div className="hero-comics">
           <span>Quadrinhos</span>
           <br />
+          <Book />
           <span>3.0000</span>
         </div>
 
         <div className="hero-movies">
           <span>Filmes</span>
           <br />
+          <Movie />
           <span>40</span>
         </div>
       </div>
 
       <div className="hero-rating">
         <span>Rating: </span>
+        <span>
+          <Rating stars={4} />
+        </span>
       </div>
 
       <div className="hero-last-comic">

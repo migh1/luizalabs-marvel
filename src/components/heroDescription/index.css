@@ -59,6 +59,9 @@
   font-weight: 500;
   font-size: 22px;
 }
+.hero-comics img {
+  margin: 10px 10px -6px 0px;
+}
 
 .hero-movies {
   width: 30%;
@@ -71,16 +74,27 @@
   font-weight: 500;
   font-size: 22px;
 }
+.hero-movies img {
+  margin: 10px 10px -4px 0px;
+}
 
 .hero-rating {
   width: 100%;
   margin-top: 40px;
   color: #404040;
-}
 
+  display: flex;
+  align-items: center;
+}
 .hero-rating > span:first-child {
   font-weight: 500;
   font-size: 20px;
+}
+.hero-rating > span:last-child {
+  margin-left: 20px;
+}
+.hero-rating img {
+  height: 23px;
 }
 
 .hero-last-comic {

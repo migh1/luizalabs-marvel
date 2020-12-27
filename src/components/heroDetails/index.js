@@ -4,6 +4,9 @@ import md5 from 'md5';
 import { privateKey, publicKey } from '../../contants';
 import useRequest from '../../hooks/useRequest';
 
+import HeroDescription from '../heroDescription';
+import HeroImage from '../heroImage';
+
 import './index.css';
 
 const HeroDetails = ({ id }) => {
@@ -28,7 +31,12 @@ const HeroDetails = ({ id }) => {
     }
   }, [response]);
 
-  return <>{hero.name}</>;
+  return (
+    <>
+      <HeroDescription hero={hero} />
+      <HeroImage />
+    </>
+  );
 };
 
 export default HeroDetails;

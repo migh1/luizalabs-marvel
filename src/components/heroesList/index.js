@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import md5 from 'md5';
 import useRequest from '../../hooks/useRequest';
 import Favorite from '../favorite';
@@ -34,11 +35,13 @@ const HeroesList = () => {
       {heroes.map((hero) => {
         return (
           <div key={hero.id}>
-            <img
-              className="hero-thumbnail"
-              src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
-              alt={hero.name}
-            />
+            <Link to={`/hero/${hero.id}`}>
+              <img
+                className="hero-thumbnail"
+                src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
+                alt={hero.name}
+              />
+            </Link>
             <br />
             <span className="hero-description">
               <span className="hero-name">{hero.name}</span>

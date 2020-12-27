@@ -5,6 +5,17 @@
   flex-direction: column;
 }
 
+.hero-search input {
+  border: 1px solid white;
+  background-color: white;
+}
+
+.hero-search input::placeholder {
+  color: #b9b9b9;
+  font-weight: 500;
+  font-size: 18px;
+}
+
 .searchBar {
   margin-top: 30px;
 
@@ -21,4 +32,6 @@
 
 .searchBar::placeholder {
   color: #ff1510;
+  font-weight: 500;
+  font-size: 18px;
 }

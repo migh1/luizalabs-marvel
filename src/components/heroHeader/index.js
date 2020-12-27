@@ -9,7 +9,7 @@ const HeroHeader = () => {
   return (
     <div className="hero-header">
       <Logo />
-      <SearchBar />
+      <SearchBar className="hero-search" />
     </div>
   );
 };

@@ -35,14 +35,14 @@ const HeroesList = () => {
           <div key={hero.id}>
             <Link to={`/hero/${hero.id}`}>
               <img
-                className="hero-thumbnail"
+                className="hero-list-thumbnail"
                 src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
                 alt={hero.name}
               />
             </Link>
             <br />
-            <span className="hero-description">
-              <span className="hero-name">{hero.name}</span>
+            <span className="hero-list-description">
+              <span className="hero-list-name">{hero.name}</span>
               <Favorite active={false} />
             </span>
           </div>

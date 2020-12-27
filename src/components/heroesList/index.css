@@ -10,6 +10,14 @@
   padding: 10px;
 }
 
+.hero-list > div:nth-child(4n + 1) {
+  padding-left: 0;
+}
+
+.hero-list > div:nth-child(4n) {
+  padding-right: 0;
+}
+
 .hero-list span:nth-last-child() {
   text-align: end;
 }

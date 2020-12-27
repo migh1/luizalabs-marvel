@@ -36,7 +36,6 @@ const HeroDetails = ({ id }) => {
         if (sheet.rules.length) {
           for (const rule of sheet.cssRules) {
             if (rule.selectorText === '.hero-container::after') {
-              console.log(hero.name);
               rule.style['content'] = `'${response.data.results[0].name}'`;
             }
           }

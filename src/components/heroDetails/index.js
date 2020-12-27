@@ -32,10 +32,10 @@ const HeroDetails = ({ id }) => {
   }, [response]);
 
   return (
-    <>
+    <div className="hero-container">
       <HeroDescription hero={hero} />
-      <HeroImage />
-    </>
+      <HeroImage thumbnail={hero.thumbnail} />
+    </div>
   );
 };
 

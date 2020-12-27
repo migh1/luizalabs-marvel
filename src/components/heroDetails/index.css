@@ -1,0 +1,15 @@
+.hero-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.hero-container > .hero-description-container {
+  width: 30%;
+  padding: 10%;
+}
+
+.hero-container > .hero-image-container {
+  width: 50%;
+  padding: 10% 10% 10% 0;
+  max-height: calc(100vh - 200px);
+}

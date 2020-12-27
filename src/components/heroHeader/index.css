@@ -1,0 +1,10 @@
+.hero-header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.hero-header img {
+  margin: 0 5%;
+}

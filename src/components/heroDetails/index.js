@@ -8,7 +8,6 @@ import HeroDescription from '../heroDescription';
 import HeroImage from '../heroImage';
 
 import './index.css';
-import Footer from '../footer';
 
 const HeroDetails = ({ id }) => {
   const { _get, loading, response, error } = useRequest();
@@ -45,13 +44,10 @@ const HeroDetails = ({ id }) => {
   }, [response]);
 
   return (
-    <>
-      <div className="hero-container">
-        <HeroDescription hero={hero} />
-        <HeroImage thumbnail={hero.thumbnail} />
-      </div>
-      <Footer />
-    </>
+    <div className="hero-container">
+      <HeroDescription hero={hero} />
+      <HeroImage thumbnail={hero.thumbnail} />
+    </div>
   );
 };
 

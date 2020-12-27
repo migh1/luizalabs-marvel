@@ -5,6 +5,7 @@ import HeroDetails from '../../components/heroDetails';
 import HeroReleases from '../../components/heroReleases';
 
 import './index.css';
+import Footer from '../../components/footer';
 
 const Hero = ({
   match: {
@@ -15,7 +16,8 @@ const Hero = ({
     <div className="hero-page">
       <HeroHeader />
       <HeroDetails id={id} />
-      <HeroReleases />
+      <HeroReleases id={id} />
+      <Footer />
     </div>
   );
 };

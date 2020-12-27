@@ -27,14 +27,14 @@ const HeroDescription = ({ hero }) => {
           <span>Quadrinhos</span>
           <br />
           <Book />
-          <span>3.0000</span>
+          <span>{hero.comics?.available}</span>
         </div>
 
         <div className="hero-movies">
           <span>Filmes</span>
           <br />
           <Movie />
-          <span>40</span>
+          <span>{hero.series?.available}</span>
         </div>
       </div>
 

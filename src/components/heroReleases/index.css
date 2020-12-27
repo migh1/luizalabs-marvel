@@ -1,0 +1,27 @@
+.hero-releases-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+
+  padding: 10%;
+  width: 70vw;
+}
+
+.hero-releases-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #404040;
+}
+
+.hero-releases-comics {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.hero-releases-comics > div {
+  width: 25%;
+
+  padding: 10px;
+}

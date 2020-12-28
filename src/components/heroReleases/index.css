@@ -1,11 +1,10 @@
 .hero-releases-container {
+  width: 80%;
+  padding: 0 10%;
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: left;
-
-  padding: 10%;
-  width: 70vw;
 }
 
 .hero-releases-title {
@@ -17,11 +16,23 @@
 .hero-releases-comics {
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
+  flex-wrap: wrap;
+  margin: 30px 0 100px 0;
 }
 
-.hero-releases-comics > div {
-  width: 25%;
+.hero-releases-comics div {
+  width: calc(25% - 20px);
 
   padding: 10px;
+}
+
+.hero-releases-comics div img {
+  max-width: calc(100% - 20px);
+  margin-bottom: 20px;
+}
+
+.hero-releases-comics div span {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 30px;
 }

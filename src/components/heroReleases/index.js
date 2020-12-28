@@ -6,6 +6,8 @@ import useRequest from '../../hooks/useRequest';
 
 import './index.css';
 
+const NO_IMAGE = 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg';
+
 const HeroReleases = ({ id }) => {
   const { _get, loading, response, error } = useRequest();
   const [releases, setReleases] = useState([]);
@@ -35,7 +37,16 @@ const HeroReleases = ({ id }) => {
       </div>
       <div className="hero-releases-comics">
         {releases.map((release) => {
-          return <div>{release.title}</div>;
+          const imageSrc = release.images.length
+            ? `${release.images[0]?.path}.${release.images[0]?.extension}`
+            : NO_IMAGE;
+          return (
+            <div>
+              <img src={imageSrc} alt="Foto Quadrinho" />
+              <br />
+              <span>{release.title}</span>
+            </div>
+          );
         })}
       </div>
     </div>

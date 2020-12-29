@@ -56,29 +56,31 @@ const HeroesList = () => {
   };
 
   return (
-    <div className="hero-list">
-      {(context.onlyFavorites ? favoritesHeroes : heroes).map((hero) => {
-        return (
-          <div key={hero.id}>
-            <Link to={`/hero/${hero.id}`}>
-              <img
-                className="hero-list-thumbnail"
-                src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
-                alt={hero.name}
-              />
-            </Link>
-            <br />
-            <span className="hero-list-description">
-              <span className="hero-list-name">{hero.name}</span>
-              <Favorite
-                active={favoritesHeroes.find((fhero) => fhero.id === hero.id)}
-                onClick={(toggle) => onFavoriteHandler(hero, toggle)}
-              />
-            </span>
-          </div>
-        );
-      })}
-      {!heroes.length && context.searchValue !== '' && 'Nenhum herói encontrado...'}
+    <div>
+      <div className="hero-list">
+        {(context.onlyFavorites ? favoritesHeroes : heroes).map((hero) => {
+          return (
+            <div key={hero.id}>
+              <Link to={`/hero/${hero.id}`}>
+                <img
+                  className="hero-list-thumbnail"
+                  src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
+                  alt={hero.name}
+                />
+              </Link>
+              <br />
+              <span className="hero-list-description">
+                <span className="hero-list-name">{hero.name}</span>
+                <Favorite
+                  active={favoritesHeroes.find((fhero) => fhero.id === hero.id)}
+                  onClick={(toggle) => onFavoriteHandler(hero, toggle)}
+                />
+              </span>
+            </div>
+          );
+        })}
+        {!heroes.length && context.searchValue !== '' && 'Nenhum herói encontrado...'}
+      </div>
     </div>
   );
 };

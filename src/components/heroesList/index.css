@@ -3,10 +3,11 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 25px;
+  padding: 0;
 }
 
 .hero-list > div {
-  width: calc(25% - 20px);
+  width: calc(25% - 15px);
   padding: 10px;
 }
 

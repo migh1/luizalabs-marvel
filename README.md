@@ -2,7 +2,7 @@
 
 A aplicação foi deployada usando o Github Pages e pode ser acessada através do endereço:
 
-https://migh1.github.io/luizalabs-marvel
+https://migh1.github.io/luizalabs-marvel/#/
 
 # Aplicação local
 

@@ -2,14 +2,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import md5 from 'md5';
-import { publicKey, privateKey } from '../../contants';
+import { publicKey, privateKey, localStorageKey } from '../../contants';
 import useRequest from '../../hooks/useRequest';
 import Favorite from '../favorite';
 import searchContext from '../../utils/context';
 
 import './index.css';
-
-const localStorageKey = 'marvel_favorite_heroes';
 
 const HeroesList = () => {
   const [heroes, setHeroes] = useState([]);

@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Aplicação deployada
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A aplicação foi deployada usando o Github Pages e pode ser acessada através do endereço:
 
-## Available Scripts
+https://migh1.github.io/luizalabs-marvel
 
-In the project directory, you can run:
+# Aplicação local
 
-### `yarn start`
+1. Para rodar a aplicação local, primeiramente, é preciso criar as chaves de API da Marvel, que pode ser feito acessando o [Marvel Developer](https://www.marvel.com/signin?referer=https%3A%2F%2Fdeveloper.marvel.com%2Faccount) e gerando suas Keys
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Feito isso, crie um arquivo chamado .env na raiz do projeto, e siga o exemplo do arquivo .env.example, colocando suas recém geradas chaves conforme o modelo.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3. E então, é preciso clonar o repositório, instalar as dependencias e iniciar a aplicação.
 
-### `yarn test`
+```bash
+git clone https://github.com/migh1/luizalabs-marvel.git
+cd luizalabs-marvel
+yarn install
+yarn start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Sobre o desenvolvimento
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Optei por fazer a construção do projeto da forma mais simples e intuitiva possível. A componentização realizada, além do motivo principal de reutilização de código, foi para separar e abstrair responsabilidades.
+- O intuito de separar as responsabilidade serve para:
+  - Manutenbilidade do código
+  - Legibilidade do código
+  - Testes mais individuais
+- Foi utilizado a versão de React.Hooks e Functional Components e neles apenas:
+  - React.useContext
+  - React.useState
+  - React.useEffect

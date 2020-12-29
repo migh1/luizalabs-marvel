@@ -15,8 +15,8 @@ const HeroesHeader = () => {
     setContext({ ...context, orderBy: toggle ? 'name' : '-name' });
   };
 
-  const onlyFavoritesHandler = (toggle) => {
-    setContext({ ...context, onlyFavorites: toggle });
+  const onlyFavoritesHandler = () => {
+    setContext({ ...context, onlyFavorites: !context.onlyFavorites });
   };
 
   return (
@@ -34,11 +34,8 @@ const HeroesHeader = () => {
           <span className="heroes-header-text-color">Ordenar por nome - A/Z</span>
           <Toggle active={toggleStatus} onClick={onOrderByHandler} />
         </span>
-        <span className="heroes-header-favorite">
-          <Favorite
-            active={context.onlyFavorites}
-            onClick={(toggle) => onlyFavoritesHandler(toggle)}
-          />
+        <span className="heroes-header-favorite" onClick={onlyFavoritesHandler}>
+          <Favorite active={context.onlyFavorites} onClick={() => {}} />
           <span className="heroes-header-text-color">Somente favoritos</span>
         </span>
       </div>

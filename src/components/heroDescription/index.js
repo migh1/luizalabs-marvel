@@ -15,15 +15,15 @@ const HeroDescription = ({ hero }) => {
     setFavoritesHeroes(favorites);
   }, []);
 
-  const onFavoriteHandler = (heroId, toggle) => {
+  const onFavoriteHandler = (hero, toggle) => {
     if (toggle) {
       if (favoritesHeroes.length < 5) {
-        const newFavorites = [...favoritesHeroes, heroId];
-        localStorage.setItem(localStorageKey, JSON.stringify([...favoritesHeroes, heroId]));
+        const newFavorites = [...favoritesHeroes, hero];
+        localStorage.setItem(localStorageKey, JSON.stringify([...favoritesHeroes, hero]));
         setFavoritesHeroes(newFavorites);
       }
     } else {
-      const newFavorites = favoritesHeroes.filter((id) => id !== heroId);
+      const newFavorites = favoritesHeroes.filter((fhero) => fhero.id !== hero.id);
       localStorage.setItem(localStorageKey, JSON.stringify(newFavorites));
       setFavoritesHeroes(newFavorites);
     }
@@ -37,8 +37,8 @@ const HeroDescription = ({ hero }) => {
         </div>
         <div>
           <Favorite
-            active={favoritesHeroes.includes(hero.id)}
-            onClick={(toggle) => onFavoriteHandler(hero.id, toggle)}
+            active={favoritesHeroes.find((fhero) => fhero.id === hero.id)}
+            onClick={(toggle) => onFavoriteHandler(hero, toggle)}
             size="x2"
           />
         </div>

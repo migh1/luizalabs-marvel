@@ -17,7 +17,7 @@ const Home = () => {
   });
 
   const onChangeHandler = debounce((value) => {
-    setContext({ ...context, searchValue: value });
+    setContext({ ...context, searchValue: value, offset: 0, page: 1 });
   }, 500);
 
   return (

@@ -4,11 +4,25 @@ import toggleOffIcon from '../../assets/toggle/Group 6.png';
 
 import './index.css';
 
-const Toggle = (active) => {
+const Toggle = ({ active, onClick }) => {
+  const onClickHandler = (toggle) => {
+    onClick(toggle);
+  };
+
   return active ? (
-    <img className="toggle-icon" src={toggleOnIcon} alt="Botão toggle ligado" />
+    <img
+      onClick={() => onClickHandler(false)}
+      className="toggle-icon"
+      src={toggleOnIcon}
+      alt="Botão toggle ligado"
+    />
   ) : (
-    <img className="toggle-icon" src={toggleOffIcon} alt="Botão toggle desligado" />
+    <img
+      onClick={() => onClickHandler(true)}
+      className="toggle-icon"
+      src={toggleOffIcon}
+      alt="Botão toggle desligado"
+    />
   );
 };
 

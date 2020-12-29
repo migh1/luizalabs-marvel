@@ -34,7 +34,7 @@ const HeroesList = () => {
 
   useEffect(() => {
     fetchHeroes();
-  }, [context.searchValue]);
+  }, [context.searchValue, context.orderBy]);
 
   useEffect(() => {
     if (response) {

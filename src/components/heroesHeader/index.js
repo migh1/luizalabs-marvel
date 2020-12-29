@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Toggle from '../toggle';
 import Favorite from '../favorite';
 import nounSuperheroIcon from '../../assets/icones/heroi/noun_Superhero_2227044.png';
@@ -7,7 +7,13 @@ import searchContext from '../../utils/context';
 import './index.css';
 
 const HeroesHeader = () => {
-  const [context] = useContext(searchContext);
+  const [context, setContext] = useContext(searchContext);
+  const [toggleStatus, setToggleStatus] = useState(true);
+
+  const onOrderByHandler = (toggle) => {
+    setToggleStatus(toggle);
+    setContext({ ...context, orderBy: toggle ? 'name' : '-name' });
+  };
 
   return (
     <div className="heroesHeader-container">
@@ -22,7 +28,7 @@ const HeroesHeader = () => {
             alt="ícone de herói com capa"
           />
           <span className="heroes-header-text-color">Ordenar por nome - A/Z</span>
-          <Toggle />
+          <Toggle active={toggleStatus} onClick={onOrderByHandler} />
         </span>
         <span className="heroes-header-favorite">
           <Favorite active />

@@ -22,7 +22,7 @@ const HeroReleases = ({ id }) => {
     if (id) {
       fetchHeroReleases();
     }
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     if (response) {
@@ -41,7 +41,7 @@ const HeroReleases = ({ id }) => {
             ? `${release.images[0]?.path}.${release.images[0]?.extension}`
             : NO_IMAGE;
           return (
-            <div>
+            <div key={release.id}>
               <img src={imageSrc} alt="Foto Quadrinho" />
               <br />
               <span>{release.title}</span>

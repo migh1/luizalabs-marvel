@@ -19,6 +19,14 @@ yarn install
 yarn start
 ```
 
+4. Para rodar os testes, execute o seguinte comando abaixo:
+
+##### **foi feito apenas 2 testes afim de exemplificação.**
+
+```bash
+yarn test
+```
+
 # Sobre o desenvolvimento
 
 - Optei por fazer a construção do projeto da forma mais simples e intuitiva possível. A componentização realizada, além do motivo principal de reutilização de código, foi para separar e abstrair responsabilidades.

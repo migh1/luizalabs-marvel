@@ -8,6 +8,7 @@ import Favorite from '../favorite';
 import searchContext from '../../utils/context';
 
 import './index.css';
+import Pagination from '../pagination';
 
 const HeroesList = () => {
   const [heroes, setHeroes] = useState([]);
@@ -81,6 +82,7 @@ const HeroesList = () => {
         })}
         {!heroes.length && context.searchValue !== '' && 'Nenhum herói encontrado...'}
       </div>
+      <Pagination />
     </div>
   );
 };

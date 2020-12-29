@@ -1,0 +1,26 @@
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+.pagination-container div:first-child {
+  color: #ff1510;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.pagination-container div:nth-child(2) {
+  border: 1px solid red;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.pagination-container div:last-child {
+  color: #ff1510;
+  margin-left: 20px;
+  cursor: pointer;
+}

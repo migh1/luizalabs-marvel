@@ -7,7 +7,12 @@ import debounce from '../../utils/debounce';
 import SearchContext from '../../utils/context';
 
 const Home = () => {
-  const [context, setContext] = useState({ searchValue: '', total: 0, orderBy: 'name' });
+  const [context, setContext] = useState({
+    searchValue: '',
+    total: 0,
+    orderBy: 'name',
+    onlyFavorites: false,
+  });
 
   const onChangeHandler = debounce((value) => {
     setContext({ ...context, searchValue: value });

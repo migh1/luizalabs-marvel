@@ -57,7 +57,7 @@ const HeroesList = () => {
 
   return (
     <div className="hero-list">
-      {heroes.map((hero) => {
+      {(context.onlyFavorites ? favoritesHeroes : heroes).map((hero) => {
         return (
           <div key={hero.id}>
             <Link to={`/hero/${hero.id}`}>

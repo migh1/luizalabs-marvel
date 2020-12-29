@@ -1,10 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import md5 from 'md5';
 import { publicKey, privateKey } from '../../contants';
 import useRequest from '../../hooks/useRequest';
 import Favorite from '../favorite';
+import searchContext from '../../utils/context';
 
 import './index.css';
 
@@ -14,23 +15,31 @@ const HeroesList = () => {
   const [heroes, setHeroes] = useState([]);
   const [favoritesHeroes, setFavoritesHeroes] = useState([]);
   const { _get, loading, response, error } = useRequest();
+  const [context, setContext] = useContext(searchContext);
 
   const fetchHeroes = () => {
     const ts = Date.now();
     const hash = md5(ts + privateKey + publicKey);
-    _get(`/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}`);
+    _get(
+      `/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}${
+        context.searchValue && `&nameStartsWith=${context.searchValue}`
+      }&orderBy=${context.orderBy}`
+    );
   };
 
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem(localStorageKey)) || [];
     setFavoritesHeroes(favorites);
-
-    fetchHeroes();
   }, []);
+
+  useEffect(() => {
+    fetchHeroes();
+  }, [context.searchValue]);
 
   useEffect(() => {
     if (response) {
       setHeroes(response.data.results);
+      setContext({ ...context, total: response.data.total });
     }
   }, [response]);
 
@@ -71,6 +80,7 @@ const HeroesList = () => {
           </div>
         );
       })}
+      {!heroes.length && context.searchValue !== '' && 'Nenhum herói encontrado...'}
     </div>
   );
 };

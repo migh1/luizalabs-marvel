@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Toggle from '../toggle';
 import Favorite from '../favorite';
 import nounSuperheroIcon from '../../assets/icones/heroi/noun_Superhero_2227044.png';
+import searchContext from '../../utils/context';
 
 import './index.css';
 
 const HeroesHeader = () => {
+  const [context] = useContext(searchContext);
+
   return (
     <div className="heroesHeader-container">
       <div>
-        <span className="heroes-header-total">Encontrados 20 heróis</span>
+        <span className="heroes-header-total">Encontrados {context.total} heróis</span>
       </div>
       <div>
         <span>

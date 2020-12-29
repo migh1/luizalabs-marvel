@@ -22,7 +22,7 @@ const HeroesList = () => {
     _get(
       `/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}${
         context.searchValue && `&nameStartsWith=${context.searchValue}`
-      }&orderBy=${context.orderBy}`
+      }&offset=${context.offset}&orderBy=${context.orderBy}`
     );
   };
 
@@ -33,7 +33,7 @@ const HeroesList = () => {
 
   useEffect(() => {
     fetchHeroes();
-  }, [context.searchValue, context.orderBy]);
+  }, [context.searchValue, context.orderBy, context.offset]);
 
   useEffect(() => {
     if (response) {
@@ -58,7 +58,7 @@ const HeroesList = () => {
 
   return (
     <div>
-      <div className="hero-list">
+      <div className={`hero-list ${loading ? 'hero-list-loading' : ''}`}>
         {(context.onlyFavorites ? favoritesHeroes : heroes).map((hero) => {
           return (
             <div key={hero.id}>

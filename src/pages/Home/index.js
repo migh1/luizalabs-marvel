@@ -12,6 +12,8 @@ const Home = () => {
     total: 0,
     orderBy: 'name',
     onlyFavorites: false,
+    page: 1,
+    offset: 0,
   });
 
   const onChangeHandler = debounce((value) => {

@@ -43,3 +43,18 @@
   font-weight: 700;
   color: #404040;
 }
+
+.hero-list.hero-list-loading div {
+  opacity: 0.3;
+}
+
+.hero-list-loading::before {
+  opacity: 1;
+  content: 'Carregando...';
+  position: absolute;
+  left: 40%;
+  bottom: 0%;
+
+  font-size: 50px;
+  font-weight: 500;
+}

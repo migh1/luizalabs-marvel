@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/luizalabs-marvel/static/css/main.8bd6a6a4.chunk.css",
-    "main.js": "/luizalabs-marvel/static/js/main.9dfa54af.chunk.js",
-    "main.js.map": "/luizalabs-marvel/static/js/main.9dfa54af.chunk.js.map",
+    "main.css": "/luizalabs-marvel/static/css/main.e3b1d2ce.chunk.css",
+    "main.js": "/luizalabs-marvel/static/js/main.fab35923.chunk.js",
+    "main.js.map": "/luizalabs-marvel/static/js/main.fab35923.chunk.js.map",
     "runtime-main.js": "/luizalabs-marvel/static/js/runtime-main.d17e4040.js",
     "runtime-main.js.map": "/luizalabs-marvel/static/js/runtime-main.d17e4040.js.map",
-    "static/js/2.211790ac.chunk.js": "/luizalabs-marvel/static/js/2.211790ac.chunk.js",
-    "static/js/2.211790ac.chunk.js.map": "/luizalabs-marvel/static/js/2.211790ac.chunk.js.map",
+    "static/js/2.835c9811.chunk.js": "/luizalabs-marvel/static/js/2.835c9811.chunk.js",
+    "static/js/2.835c9811.chunk.js.map": "/luizalabs-marvel/static/js/2.835c9811.chunk.js.map",
     "index.html": "/luizalabs-marvel/index.html",
-    "static/css/main.8bd6a6a4.chunk.css.map": "/luizalabs-marvel/static/css/main.8bd6a6a4.chunk.css.map",
-    "static/js/2.211790ac.chunk.js.LICENSE.txt": "/luizalabs-marvel/static/js/2.211790ac.chunk.js.LICENSE.txt",
+    "static/css/main.e3b1d2ce.chunk.css.map": "/luizalabs-marvel/static/css/main.e3b1d2ce.chunk.css.map",
+    "static/js/2.835c9811.chunk.js.LICENSE.txt": "/luizalabs-marvel/static/js/2.835c9811.chunk.js.LICENSE.txt",
     "static/media/Group.77d3c46d.png": "/luizalabs-marvel/static/media/Group.77d3c46d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d17e4040.js",
-    "static/js/2.211790ac.chunk.js",
-    "static/css/main.8bd6a6a4.chunk.css",
-    "static/js/main.9dfa54af.chunk.js"
+    "static/js/2.835c9811.chunk.js",
+    "static/css/main.e3b1d2ce.chunk.css",
+    "static/js/main.fab35923.chunk.js"
   ]
 }

@@ -8,8 +8,11 @@ import Favorite from '../favorite';
 
 import './index.css';
 
+const localStorageKey = 'marvel_favorite_heroes';
+
 const HeroesList = () => {
   const [heroes, setHeroes] = useState([]);
+  const [favoritesHeroes, setFavoritesHeroes] = useState([]);
   const { _get, loading, response, error } = useRequest();
 
   const fetchHeroes = () => {
@@ -19,6 +22,9 @@ const HeroesList = () => {
   };
 
   useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+    setFavoritesHeroes(favorites);
+
     fetchHeroes();
   }, []);
 
@@ -27,6 +33,20 @@ const HeroesList = () => {
       setHeroes(response.data.results);
     }
   }, [response]);
+
+  const onFavoriteHandler = (heroId, toggle) => {
+    if (toggle) {
+      if (favoritesHeroes.length < 5) {
+        const newFavorites = [...favoritesHeroes, heroId];
+        localStorage.setItem(localStorageKey, JSON.stringify([...favoritesHeroes, heroId]));
+        setFavoritesHeroes(newFavorites);
+      }
+    } else {
+      const newFavorites = favoritesHeroes.filter((id) => id !== heroId);
+      localStorage.setItem(localStorageKey, JSON.stringify(newFavorites));
+      setFavoritesHeroes(newFavorites);
+    }
+  };
 
   return (
     <div className="hero-list">
@@ -43,7 +63,10 @@ const HeroesList = () => {
             <br />
             <span className="hero-list-description">
               <span className="hero-list-name">{hero.name}</span>
-              <Favorite active={false} />
+              <Favorite
+                active={favoritesHeroes.includes(hero.id)}
+                onClick={(toggle) => onFavoriteHandler(hero.id, toggle)}
+              />
             </span>
           </div>
         );

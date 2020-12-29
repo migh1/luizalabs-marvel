@@ -17,18 +17,24 @@ const favoriteIcon = {
   },
 };
 
-const Favorite = ({ active, size }) => {
+const Favorite = ({ active, size, onClick }) => {
+  const onClickHandler = (toggle) => {
+    onClick(toggle);
+  };
+
   return active ? (
     <img
       className={`favorite-icon${size || 'x1'}`}
       src={favoriteIcon.filled[size || 'x1']}
       alt="Botão de coração preenchido"
+      onClick={() => onClickHandler(false)}
     />
   ) : (
     <img
       className={`favorite-outlined-icon${size || 'x1'}`}
       src={favoriteIcon.outlined[size || 'x1']}
       alt="Botão de coração não preenchido"
+      onClick={() => onClickHandler(true)}
     />
   );
 };
